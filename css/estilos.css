@@ -1,12 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Signika Negative", sans-serif;
+}
+
+
+
+:root {
+    --white: #FFFFFF;
+    --light-grey: #D9D9D9;
+    --beaver: #A78976;
+    --black: #141414;
+    --eerie-black: #1F1F1F;
+    --jet: #292929;
+    --navi: #161D6F;
+    --bluedrk: #0B2F9F;
+    --teal: #98DED9;
+    --mint: #C7FFD8;
+    --bluewite: #46a2fd;
+}
+
+body{
+    background-color: var(--white);
 }
 
 header{
@@ -119,13 +139,14 @@ header{
     position: relative;
     display: flex;
     align-items: center;
-    background-image: url(../img/img8.jpg);
+    background-image: url(https://noticias-web.com.ar/wp-content/uploads/2021/08/electricista.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .container-cover:before{
+    background: rgba(38, 172, 255, 0.63);
     content: '';
     width: 100%;
     height: 100%;
@@ -145,20 +166,21 @@ header{
     align-items: center;
     position: relative;
     z-index: 1;
+    font-family: Calibri;
 }
 
 .container-info-cover h1{
     backdrop-filter: blur(10px);
     font-size: 60px;
     font-weight: 500;
-    color: #000000;
+    color: var(--white);
     margin-bottom: 20px;
 }
 
 .container-info-cover p{
     
     backdrop-filter: blur(10px);
-    color: #000000;
+    color: var(--white);
     font-size: 20px;
     font-weight: 300;
 }
@@ -184,24 +206,37 @@ header{
     margin-top: 40px;
     display: flex;
     justify-content: center;
+    background-color: var(--white);
 }
 
-cotainer_texto-servicios{
+.container_texto-servicios{
+    height: 100vh;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     flex-wrap: wrap;
 }
 
+
+.container_texto-servicios p{
+    color: var(--white);
+}
+
 .texto_servicios  {
     display: flex;
     justify-content: center;
-    background-color: rgba(121, 100, 54, 0.548);
+    background-color: var(--bluewite);
     text-align: start;
     font-size: 2rem;
     padding: 3px;
     border-radius: 12px;
     margin: 3px;
+}
+
+.container_texto-beneficios{
+    background-color: #D2313B;
+    height: 100vh;
+    display: contents
 }
 
 article{
@@ -232,7 +267,7 @@ article:before{
     background: #46a2fd;
 }
 
-article h1{
+article h2{
     margin-top: 20px;
     font-weight: 500;
     font-size: 40px;
@@ -362,6 +397,119 @@ footer .redes-footer .fa-instagram:hover{
     color: #8e8e8e;
     font-weight: 500;
 }
+
+
+/* Tarteja de contactos */
+
+/* From Uiverse.io by Smit-Prajapati */ 
+
+
+.container_contacto{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.orange {
+    color: #ff7a01;
+  }
+  
+  .form-container {
+    max-width: 700px;
+    margin: 30px;
+    background-color: #46A2FD;
+    padding: 30px;
+    border-left: 5px solid #ff7a01;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+  }
+  
+  .heading {
+    display: block;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  
+  .form-container .form .input {
+    color: #87a4b6;
+    width: 100%;
+    background-color: #378add;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    border-left: 1px solid transparent;
+  }
+  
+  .form-container .form .input:focus {
+    border-left: 5px solid #ff7a01;
+  }
+  
+  .form-container .form .textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #013747;
+    color: #ff7a01;
+    font-weight: bold;
+    resize: none;
+    max-height: 150px;
+    margin-bottom: 20px;
+    border-left: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form-container .form .textarea:focus {
+    border-left: 5px solid #ff7a01;
+  }
+  
+  .form-container .form .button-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-container .form .button-container .send-button {
+    flex-basis: 70%;
+    background: #ff7a01;
+    padding: 10px;
+    color: #001925;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form-container .form .button-container .send-button:hover {
+    background: transparent;
+    border: 1px solid #ff7a01;
+    color: #ff7a01;
+  }
+  
+  .form-container .form .button-container .reset-button-container {
+    filter: drop-shadow(1px 1px 0px #ff7a01);
+    flex-basis: 30%;
+  }
+  
+  .form-container .form .button-container .reset-button-container .reset-button {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    color: #ff7a01;
+    font-weight: bold;
+    background: #001925;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form-container .form .button-container .reset-button-container .reset-button:hover {
+    background: #ff7a01;
+    color: #001925;
+  }
+
 
 /* Responsive Design - adaptable a dispositivos moviles*/
 
