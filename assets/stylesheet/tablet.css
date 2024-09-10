@@ -29,33 +29,34 @@ nav.nav_menu.active {
 
 /* Sobre mi */
 
-.sobreMi {
+.servicios {
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-.container_content-sobreMi {
+.container_content-servicios {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.container_texto-sobreMi {
+.container_texto-servicios {
     padding: 4rem;
 }
 
-.title_sobreMi {
+.title_servicios {
     font-size: 3rem;
 }
 
-.texto_sobreMi {
+.texto_servicios {
     font-size: 1.8rem;
     line-height: 2.5rem;
 }
 
-.container_image-sobreMi {
+.container_image-servicios {
     width: 65%;
     margin-top: 2rem;
 }
@@ -77,13 +78,13 @@ nav.nav_menu.active {
     margin: 0 2rem 3rem 2rem;
 }
 
-/* Proyectos */
+/* beneficios */
 
-.cards--proyectos {
+.cards--beneficios {
     max-width: 48rem;
 }
 
-.container_btn--proyectos button {
+.container_btn--beneficios button {
     width: 20.6rem;
 }
 

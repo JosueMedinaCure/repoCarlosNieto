@@ -177,20 +177,20 @@ div.btn {
 
 /* Sobre Mí */
 
-.sobreMi {
+.servicios {
     padding-bottom: 4rem;
 }
 
-.sobreMi h1 {
+.servicios h1 {
     margin-top: 2rem;
     font-size: 3rem;
 }
 
-.container_content-sobreMi {
+.container_content-servicios {
     flex-direction: row-reverse;
 }
 
-.container_texto-sobreMi {
+.container_texto-servicios {
    
     
 }
@@ -206,7 +206,7 @@ div.btn {
     border-radius: 20px;
 }
 
-.texto_sobreMi  {
+.texto_servicios  {
     background-color: rgba(121, 100, 54, 0.548);
     text-align: start;
     font-size: 2rem;
@@ -281,14 +281,14 @@ div.btn {
     transition: .4s all;
 }
 
-/* Proyectos */
+/* beneficios */
 
-.proyectos h1 {
+.beneficios h1 {
     padding-top: 8rem;
     font-size: 3rem;
 }
 
-.puntos1-proyectos {
+.puntos1-beneficios {
     display: inline;
     position: absolute;
     width: 6rem;
@@ -296,19 +296,19 @@ div.btn {
     background-attachment: fixed;
 }
 
-.puntos2-proyectos {
+.puntos2-beneficios {
     display: inline;
     position: absolute;
     width: 6rem;
     margin: -3rem 0 0 93%;
 }
 
-.cards_container--proyectos {
+.cards_container--beneficios {
     flex-direction: row;
     justify-content: center;
 }
 
-.cards--proyectos {
+.cards--beneficios {
     width: 40rem;
     height: 40rem;
     display: flex;
@@ -322,7 +322,7 @@ div.btn {
     margin-top: -3rem;
 }
 
-.container_btn--proyectos button {
+.container_btn--beneficios button {
     width: auto;
     padding-left: 3.5rem;
     padding-right: 3.5rem;
