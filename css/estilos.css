@@ -38,7 +38,7 @@ header{
     box-shadow: 0 4px 25px -22px black;
     z-index: 2;
     background-color: #46a2fd;
-    box-shadow:  1px 2px 3px  #46a2fd;
+    box-shadow:  1px 1px 1px  #46a2fd;
 }
 
 .header-content{
