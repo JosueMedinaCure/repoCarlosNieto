@@ -35,7 +35,7 @@ btn.addEventListener('click', function() {
 });
 
 /*===== Cambio de idioma =====*/
-const changeLanguage = async language => {
+/* const changeLanguage = async language => {
     const requestJson = await fetch(`./languages/${language}.json`);
     const texts = await requestJson.json();
 
@@ -49,7 +49,7 @@ const changeLanguage = async language => {
 
 flagsElement.addEventListener('click', (e) => {
     changeLanguage(e.target.parentElement.dataset.language);
-})
+}) */
 
 
 
