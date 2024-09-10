@@ -51,9 +51,14 @@ flagsElement.addEventListener('click', (e) => {
     changeLanguage(e.target.parentElement.dataset.language);
 })
 
+
+
+
 /*===== class active por secciones =====*/
-window.addEventListener('scroll', () => {
-    const scrollY = window.pageYOffset;
+
+
+/* window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
     sectionAll.forEach((current) => {
         const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 100;
@@ -67,6 +72,30 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+ */
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    
+    sectionAll.forEach((current) => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 100;
+        const sectionId = current.getAttribute('id');
+
+        if (scrollY > sectionTop && scrollY < sectionTop + sectionHeight) {
+            const link = document.querySelector('nav a[href*="' + sectionId + '"]');
+            if (link) {
+                link.classList.add('active');
+            }
+        } else {
+            const link = document.querySelector('nav a[href*="' + sectionId + '"]');
+            if (link) {
+                link.classList.remove('active');
+            }
+        }
+    });
+});
+
+
 
 /*===== Boton y función ir arriba =====*/
 window.onscroll = function() {
