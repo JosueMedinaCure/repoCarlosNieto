@@ -35,7 +35,6 @@ header{
     left: 0;
     width: 100%;
     height: auto;
-    box-shadow: 0 4px 25px -22px black;
     z-index: 2;
     background-color: #46a2fd;
     box-shadow:  1px 1px 1px  #46a2fd;
@@ -233,12 +232,37 @@ header{
 }
 
 .container_texto-beneficios{
-    height: 100vh;
-    display: contents;    
+    height: auto;
+    display: flex;
+    flex-direction: column;  
 }
 
 .container_texto-beneficios h2{
     margin-top: 60px;
+}
+
+.beneficicos{
+    background-color: #378add;
+    height: 400px;
+    width: auto/*  */;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 12px;
+}
+.beneficicos li{
+    background-color: #dbdbdb;
+    margin: 12px;
+    padding: 5px;
+    height: auto;
+    display: flex;
+    border-radius: 8px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 18px;
 }
 
 
@@ -532,6 +556,8 @@ footer .redes-footer .fa-instagram:hover{
 }
 
 @media screen and (max-width: 1020px){
+
+
 
     .container-content{
         width: 100%;
