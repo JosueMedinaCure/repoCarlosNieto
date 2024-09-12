@@ -9,10 +9,14 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 
 
 :root {
-    --white: #FFFFFF;
+    --white: #ffffff;
     --light-grey: #D9D9D9;
     --beaver: #A78976;
     --black: #141414;
@@ -20,15 +24,76 @@
     --jet: #292929;
     --navi: #161D6F;
     --bluedrk: #0B2F9F;
-    --teal: #98DED9;
+    --teal: #98ded9c1;
     --mint: #C7FFD8;
-    --bluewite: #46a2fd;
+    --bluewite1tp: #caf0f8d4;
+    --bluewite2tp: #508b978e;
+    --bluewite3tp: #4e8e9972;
+    --blue1:#caf0f8df;
+    --blue2:#ade8f4;
+    --blue3:#90e0ef;
+    --blue4:#48cae4;
+    --blue5:#00b4d8;
+    --blue6:#0096c7;
+    --blue7:#0077b6;
+    --blue8:#023e8a;
+    --blue9:#03045e;
+    --blue10:#004168;
 }
 
-body{
+
+
+
+
+
+
+/* Sections */
+
+.scroll{
+    scroll-snap-type: y mandatory;
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+           
+}
+
+.section-portada{
+    scroll-snap-align: start;
+}
+
+.section-servicios{
     background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
+.section-beneficios{
+    background-color: var(--white);
+    
+}
+
+.section-container-aside{
+    background-color: var(--white);
+    
+}
+
+.section-contacto{
+    background-color: var(--white);
+    
+}
+
+.section-footer{
+    background-color: var(--white);
+    height: auto;
+}
+
+/* sections */
+
+/* header */
 header{
     position: fixed;
     top: 0;
@@ -36,8 +101,10 @@ header{
     width: 100%;
     height: auto;
     z-index: 2;
-    background-color: #46a2fd;
-    box-shadow:  1px 1px 1px  #46a2fd;
+    transition: 0.6s;
+    background-color: var(--blue10);
+    box-shadow:  1px 1px 1px  var(--blue10);
+    
 }
 
 .header-content{
@@ -59,8 +126,20 @@ header{
 }
 
 
+
+/* animacion menu */
+
+.animacion{
+
+}
+
+/* animacion menu */
+
+
 .menu {
     height: 80px;
+    animation-duration: 0.1s;
+    transition: linear;
 }
 
 .menu nav{
@@ -74,19 +153,35 @@ header{
 }
 
 .menu nav ul li{
-    height: 100%;
-    margin: 0px 20px;
+    padding: 12px;
+    margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    border-radius: 18px;
+    transition: .2s;
 }
+
+/* .menu nav ul li:hover{
+    background-color: var(--bluewite3tp);
+    box-shadow:  9px 9px 16px var(--bluewite3tp),
+             -9px -9px 16px var(--bluewite3tp);
+} */
+
+  
+.menu nav ul li:hover {
+    background-color: var(--blue2);
+    box-shadow: 0 0 0 8px var(--bluewite3tp);
+    color: #000000;
+  }
+  
 
 .menu-selected:before{
     content: '';
     width: 100%;
     height: 4px;
-    background: #46a2fd;
+    background: #ffffff;
     position: absolute;
     top: 0;
     left: 0;
@@ -98,12 +193,10 @@ header{
     transition: color 300ms;
 }
 
-.menu nav ul li a:hover{
-    color: #46a2fd;
-}
+
 
 .menu .text-menu-selected{
-    color: #46a2fd;
+    color: #ffffff;
 }
 
 .menu nav ul li a i{
@@ -130,6 +223,11 @@ header{
 #icon-menu:hover{
     opacity: 0.8;
 }
+
+
+
+
+
 
 /*Portada*/
 
@@ -201,40 +299,62 @@ header{
 .container-content{
     width: 1200px;
     margin: auto;
-    margin-top: 40px;
     display: flex;
     justify-content: center;
-    background-color: var(--white);
 }
+
+.servicios-panel1{
+    margin: 12px;
+}
+.servicios-panel2{
+    margin: 12px;
+    
+}
+
 
 .container_texto-servicios{
     height: auto;
     display: flex;
-    flex-direction: column-reverse;
     justify-content: center;
+    border-radius: 12px;
+    flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 
 .container_texto-servicios p{
     color: var(--white);
+    font-size: 23px;
 }
 
 .texto_servicios  {
     display: flex;
     justify-content: center;
-    background-color: var(--bluewite);
+    background-color: var(--blue10);
     text-align: start;
-    font-size: 2rem;
-    padding: 3px;
-    border-radius: 12px;
-    margin: 3px;
+    padding: 11px;
+    border-radius: 35px;
+    margin: 12px;
 }
+
+.texto_servicios:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: #09517ee7;
+    box-shadow: 0 0 0 8px var(--bluewite3tp);
+}
+
+/* beneficios */
+
 
 .container_texto-beneficios{
     height: auto;
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .container_texto-beneficios h2{
@@ -243,8 +363,9 @@ header{
 
 .beneficicos{
     background-color: #378add;
-    height: 400px;
-    width: auto/*  */;
+    height: auto;
+    max-width: 1000px;
+    width: auto;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -268,6 +389,8 @@ header{
 
 
 
+
+
 article{
     width: 100%;
     padding: 20px;
@@ -286,15 +409,6 @@ article{
     align-items: center;
 }
 
-article:before{
-    content: '';
-    width: 100%;
-    height: 6px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #46a2fd;
-}
 
 article h2{
     margin-top: 20px;
@@ -315,6 +429,15 @@ article img{
 }
 
 /*Aside de los articulos de relacionados*/
+
+
+.container-aside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
 
 .container-aside aside{
   width: 320px;
@@ -360,8 +483,6 @@ article img{
 .container-footer{
     width: 100%;
     padding: 40px 0;
-    background: #f7f7f7;
-    margin-top: 40px;
 }
 
 .container-footer footer{
@@ -447,7 +568,7 @@ footer .redes-footer .fa-instagram:hover{
   .form-container {
     max-width: 700px;
     margin: 30px;
-    background-color: #46A2FD;
+    background-color: var(--blue10);
     padding: 30px;
     border-left: 5px solid #ff7a01;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
@@ -555,9 +676,11 @@ footer .redes-footer .fa-instagram:hover{
 
 }
 
-@media screen and (max-width: 1020px){
+@media screen and (max-width: 1094px){
 
-
+    section{
+        height: auto;
+    }
 
     .container-content{
         width: 100%;
@@ -580,8 +703,18 @@ footer .redes-footer .fa-instagram:hover{
 
 }
 
+@media screen and (max-width: 949px){
+    .servicios-panel1, .servicios-panel2{
+        margin: auto;
+    }
+}
+
 
 @media screen and (max-width: 800px){
+
+    section{
+        height: auto;
+    }
 
     body{
         overflow-x: hidden;
