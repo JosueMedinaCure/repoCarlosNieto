@@ -56,6 +56,7 @@ html{
 section{
     height: 100vh;
     scroll-snap-align: start;
+    margin-bottom: 20px;
            
 }
 
@@ -471,6 +472,20 @@ article img{
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
+    background-color: cornflowerblue;
+}
+
+.container-aside title{
+    width: 100%;
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    margin-bottom: 30px;
 }
 
 .container-aside aside img{
@@ -583,6 +598,8 @@ footer .redes-footer .fa-instagram:hover{
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 100px;
+    height: auto;
 }
 
 .orange {
