@@ -473,6 +473,7 @@ article img{
     align-items: center;
     text-align: center;
     background-color: cornflowerblue;
+    min-height: 320px;
 }
 
 .container-aside title{
@@ -768,6 +769,7 @@ footer .redes-footer .fa-instagram:hover{
 
     .container-info-cover h1{
         color: white;
+        font-size: 45px;
     }
 
     .container-cover{
