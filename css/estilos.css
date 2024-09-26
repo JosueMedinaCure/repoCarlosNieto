@@ -11,6 +11,7 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 
@@ -54,7 +55,6 @@ html{
 }
 
 section{
-    height: 100vh;
     scroll-snap-align: start;
     margin-bottom: 20px;
            
@@ -62,10 +62,12 @@ section{
 
 .section-portada{
     scroll-snap-align: start;
+    margin-top: 71px;
+    height: auto;
 }
 
 .section-servicios{
-    background-color: var(--white);
+    background-color: var(--blue2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -250,10 +252,11 @@ header{
 
 .container-cover{
     width: 100%;
-    height: 100vh;
+    height: auto;
     position: relative;
     display: flex;
     align-items: center;
+    background-size: 80% ;
     background-image: url(https://noticias-web.com.ar/wp-content/uploads/2021/08/electricista.jpg);
     background-position: center;
     background-size: cover;
@@ -272,7 +275,7 @@ header{
 }
 
 .container-info-cover{
-    max-width: 800px;
+    max-width: 600px;
     height: 500px;
     margin: auto;
     display: flex;
@@ -297,18 +300,118 @@ header{
     font-weight: 300;
 }
 
-.container-image-cover{
-    max-width: 800px;
-    height: 500px;
+.container-cover img{
+    max-width: 400px;
+    min-width: 200px;
+    width: 400px;
+    height: 340px;
     margin: auto;
     text-align: center;
     display: flex;
+    border-radius: 60px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
     z-index: 1;
 }
+
+
+
+
+
+
+
+/* Seccion sobre mi */
+
+.section-sobre-mi{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-sobre-mi h2{
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+
+.section-sobre-mi .content{
+    max-width: 1000px;
+}
+
+.biografia{
+    width: auto;
+    margin: 20px 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    background: aliceblue;
+}
+
+
+.biografia h3{
+    width: auto;
+    height: auto;
+    font-size: 30px;
+    margin: 12px;    
+}
+
+
+.biografia p{
+    margin: 12px 18px;
+    font-size: 18px;
+    font-weight: 400;
+        
+}
+
+
+.certificados{
+    margin: 20px 20px;
+    width: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    background: aliceblue;
+
+}
+.certificados-buttons{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.certificados h3{
+    width: auto;
+    height: auto;
+    font-size: 30px;
+    margin: 25px;
+
+}
+
+.certificados p{
+    font-size: 20px;
+    font-weight: 500;
+    width: auto;
+    justify-content: center;
+    background-color: rgb(29, 168, 178);
+    text-align: start;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 4px 12px;
+}
+
+
+
+
+/* Seccion sobre mi */
+
+
+
+
 
 /*Contenedor - contenido del articulo*/
 
@@ -473,7 +576,7 @@ article img{
     align-items: center;
     text-align: center;
     background-color: cornflowerblue;
-    min-height: 320px;
+    min-height: 355px;
 }
 
 .container-aside title{
@@ -762,6 +865,10 @@ footer .redes-footer .fa-instagram:hover{
         overflow-x: hidden;
     }
 
+    .container-info-cover{
+        align-items: center;
+        width: 350px;
+    }
 
     .container-info-cover p{
         color: white;
@@ -770,12 +877,19 @@ footer .redes-footer .fa-instagram:hover{
     .container-info-cover h1{
         color: white;
         font-size: 45px;
+        width: 350px;
     }
 
     .container-cover{
         display: flex;
         flex-direction: column-reverse;
         flex-wrap: wrap;
+    }
+
+    .container-cover img{
+    width: 250px;
+    height: 200px;
+    margin-top: 40px;
     }
 
     .container-all{
