@@ -55,8 +55,10 @@ html{
 }
 
 section{
-    scroll-snap-align: start;
+    height: auto;
+    scroll-snap-align:center;
     margin-bottom: 20px;
+    scroll-margin-top: 100px;
            
 }
 
@@ -66,8 +68,12 @@ section{
     height: auto;
 }
 
+.section-sobre-mi{
+    margin-top: 70px;
+}
+
 .section-servicios{
-    background-color: var(--blue2);
+    background-color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -257,7 +263,7 @@ header{
     display: flex;
     align-items: center;
     background-size: 80% ;
-    background-image: url(https://noticias-web.com.ar/wp-content/uploads/2021/08/electricista.jpg);
+    background-image: url(https://diegopaz.net/wp-content/uploads/2024/04/electricista-trabaja-centralita-cable-conexion-electrica-1024x683.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -332,13 +338,14 @@ header{
 }
 
 .section-sobre-mi h2{
-    font-size: 35px;
+    font-weight: 500;
+    font-size: 40px;
     margin-bottom: 40px;
 }
 
 
 .section-sobre-mi .content{
-    max-width: 1000px;
+    max-width: 1200px;
 }
 
 .biografia{
@@ -355,7 +362,8 @@ header{
 .biografia h3{
     width: auto;
     height: auto;
-    font-size: 30px;
+    font-weight: 500;
+    font-size: 40px;
     margin: 12px;    
 }
 
@@ -387,7 +395,8 @@ header{
 .certificados h3{
     width: auto;
     height: auto;
-    font-size: 30px;
+    font-weight: 500;
+    font-size: 40px;
     margin: 25px;
 
 }
