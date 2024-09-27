@@ -325,6 +325,7 @@ header{
     align-items: center;
     position: relative;
     z-index: 1;
+    margin-top: 135px;
 }
 
 
@@ -494,7 +495,7 @@ header{
     border-radius: 12px;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width:  1200px;
 }
 
 
