@@ -19,6 +19,7 @@ html{
 :root {
     --white: #ffffff;
     --light-grey: #D9D9D9;
+    --border-gray:#d3d3d385;
     --beaver: #A78976;
     --black: #141414;
     --eerie-black: #1F1F1F;
@@ -40,6 +41,10 @@ html{
     --blue8:#023e8a;
     --blue9:#03045e;
     --blue10:#13425f;
+
+    --headerIMG:url(https://diegopaz.net/wp-content/uploads/2024/04/electricista-trabaja-centralita-cable-conexion-electrica-1024x683.jpg);
+    --equipoTrabjIMG:url(https://centroemp.com/wp-content/uploads/2019/12/maquinaria-pesada.png);
+    --BancoCondIMG:url(https://www.imdindustrial.com/wp-content/uploads/2016/06/banco-condensadores-4.jpg);
 }
 
 
@@ -57,28 +62,44 @@ html{
 section{
     height: auto;
     scroll-snap-align:center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     scroll-margin-top: 100px;
            
 }
 
 .section-portada{
     scroll-snap-align: start;
-    margin-top: 71px;
     height: auto;
+    background-image: var(--BancoCondIMG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .section-sobre-mi{
     margin-top: 70px;
+    background-color: var(--white);
 }
 
 .section-servicios{
-    background-color: var(--white);
+
+    /*     background-image: url();
+   */     background-repeat: no-repeat;
+ 
+ background-image: var(--equipoTrabjIMG);
+   background-size: 100%;
+     background-position: center;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 12px;
     
+}
+
+.section-servicios:before{
+        background: #2a6392b6;
+        background-size: cover;
 }
 
 .section-beneficios{
@@ -95,7 +116,7 @@ section{
 }
 
 .section-contacto{
-    background-color: var(--white);
+    background-color: var(--blue3);
     
 }
 
@@ -108,7 +129,7 @@ section{
 
 /* header */
 header{
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -263,7 +284,6 @@ header{
     display: flex;
     align-items: center;
     background-size: 80% ;
-    background-image: url(https://diegopaz.net/wp-content/uploads/2024/04/electricista-trabaja-centralita-cable-conexion-electrica-1024x683.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -281,13 +301,13 @@ header{
 }
 
 .container-info-cover{
-    max-width: 600px;
-    height: 500px;
-    margin: auto;
+    width: 100%;
+    height: 450px;
+    backdrop-filter: blur(2px);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     position: relative;
     z-index: 1;
 }
@@ -349,13 +369,29 @@ header{
 }
 
 .biografia{
-    width: auto;
+    max-width: 1200px;
     margin: 20px 20px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    background: aliceblue;
+}
+
+.biografia-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--border-gray);
+    border-radius: 18px;
+    align-items: center;
+}
+
+
+.biografia-content img{
+    height: 200px;
+    width: 200px;
+    margin-right: 40px;
+    border-radius: 18px;
 }
 
 
@@ -369,6 +405,7 @@ header{
 
 
 .biografia p{
+    max-width: 650px;
     margin: 12px 18px;
     font-size: 18px;
     font-weight: 400;
@@ -383,39 +420,64 @@ header{
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    background: aliceblue;
 
 }
-.certificados-buttons{
+ .card-certificado{
     display: flex;
+    margin-bottom: 5px;
+    border-radius: 12px;
+    border: 1px solid var(--border-gray);
+   
+ }
+
+ .card-certificado img{
+    height: 150px;
+    margin: 20px;
+ }
+
+
+.card-content{
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
 }
 
+    
 
 .certificados h3{
     width: auto;
     height: auto;
-    font-weight: 500;
-    font-size: 40px;
-    margin: 25px;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 2px 7px;
 
 }
 
 .certificados p{
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 16px;
     width: auto;
     justify-content: center;
-    background-color: rgb(29, 168, 178);
+    color: var(--black);
     text-align: start;
-    padding: 10px;
+    padding: 15px;
     border-radius: 12px;
-    margin: 4px 12px;
+    margin: 2px 7px;
+    cursor: pointer;
+}
+
+.certificados button{
+    width: auto;
+    margin: 2px 7px;
+    padding: 3px 5px;
 }
 
 
+.certificados button:hover{
+    background-color: red;
 
-
+}
 /* Seccion sobre mi */
 
 
@@ -453,7 +515,7 @@ header{
 
 .container_texto-servicios p{
     color: var(--white);
-    font-size: 23px;
+    font-size: 18px;
 }
 
 .texto_servicios  {
@@ -521,6 +583,7 @@ header{
 
 
 article{
+    max-width: 1200px;
     width: 100%;
     padding: 20px;
     padding-bottom: 40px;
@@ -528,7 +591,7 @@ article{
     border-radius: 6px;
     position: relative;
     overflow: hidden;    
-
+    backdrop-filter: blur(10px);
 
     display: flex;
     flex-direction: column;
@@ -545,6 +608,7 @@ article h2{
     font-weight: 500;
     font-size: 40px;
     text-align: center;
+    color: var(--white);
 }
 
 article p{
@@ -574,7 +638,7 @@ article img{
     width: 250px;
     border-right: 6px;
     box-shadow: 0 0 20px -20px black;
-    border-radius: 6px;
+    border-radius: 12px;
     overflow: hidden;
     margin-left: 40px;
     margin-bottom: 40px;
@@ -584,8 +648,8 @@ article img{
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
-    background-color: cornflowerblue;
-    min-height: 355px;
+    background-color: var(--blue10);
+    min-height: 300px;
 }
 
 .container-aside title{
@@ -601,15 +665,17 @@ article img{
     margin-bottom: 30px;
 }
 
-.container-aside aside img{
-    width: 20%;
-    border-radius: 100%;
+.container-aside aside h2{
+    background-color: var(--blue7);
+    width: 90%;
+    border-radius: 8px;
 }
 
 .container-aside aside h2,
 .container-aside aside p{
     margin-top: 20px;
     padding: 0px 20px;
+    color: var(--white);
 }
 
 .container-aside aside button{
@@ -874,6 +940,28 @@ footer .redes-footer .fa-instagram:hover{
         overflow-x: hidden;
     }
 
+    .certificados{
+        align-items: center;
+    }
+
+    .card-certificado{
+        flex-direction: column;
+        max-width: 325px;
+    }
+
+    .biografia{
+        align-items: center;
+    }
+
+    .biografia-content{
+        flex-direction: column-reverse;
+    }
+
+    .biografia-content img{
+        margin: auto;
+    }   
+
+
     .container-info-cover{
         align-items: center;
         width: 350px;
@@ -959,4 +1047,114 @@ footer .redes-footer .fa-instagram:hover{
         flex-wrap: wrap;
     }
 
+}
+
+
+
+
+
+
+h1 {
+    text-align: center;
+}
+#carrusel-caja {
+    -moz-animation: automatizacion 15s infinite linear;
+    -o-animation: automatizacion 15s infinite linear;
+    -webkit-animation: automatizacion 15s infinite linear;
+    animation: automatizacion 15s infinite linear;
+    -webkit-transition: all 0.75s ease;
+    -moz-transition: all 0.75s ease;
+    -ms-transition: all 0.75s ease;
+    -o-transition: all 0.75s ease;
+    transition: all 0.75s ease;
+    width: 300%;
+}
+#carrusel-contenido {
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: left;
+    position: absolute;
+    z-index: 1;
+    /* backdrop-filter: blur(10px); */
+}
+
+
+
+
+.imagenes{
+    height: 452px;
+    width: 100%;
+}
+.carrusel-elemento {
+    float: left;
+    width: 33.333%;
+}
+@-moz-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
+    35% {
+        margin-left: -100%;
+    }
+    65% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    95% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+@-webkit-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
+    35% {
+        margin-left: -100%;
+    }
+    65% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    95% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+@keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
+    35% {
+        margin-left: -100%;
+    }
+    65% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    95% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0;
+    }
 }
