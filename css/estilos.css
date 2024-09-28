@@ -304,6 +304,7 @@ header{
     font-weight: 500;
     color: var(--white);
     margin-bottom: 20px;
+    margin-top: 50px;
 }
 
 .container-info-cover p{
@@ -325,7 +326,7 @@ header{
     align-items: center;
     position: relative;
     z-index: 1;
-    margin-top: 135px;
+    margin-top: 25px;
 }
 
 
@@ -455,13 +456,17 @@ header{
 
 .certificados button{
     width: auto;
-    margin: 2px 7px;
+    margin: 1px 17px;
     padding: 3px 5px;
+    border-radius: 8px;
+    border: none;
 }
 
 
 .certificados button:hover{
-    background-color: red;
+    background-color: rgb(177, 209, 212);
+    transition: .2s;
+
 
 }
 /* Seccion sobre mi */
