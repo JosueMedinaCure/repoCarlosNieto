@@ -45,6 +45,8 @@ html{
     --headerIMG:url(https://diegopaz.net/wp-content/uploads/2024/04/electricista-trabaja-centralita-cable-conexion-electrica-1024x683.jpg);
     --equipoTrabjIMG:url(https://centroemp.com/wp-content/uploads/2019/12/maquinaria-pesada.png);
     --BancoCondIMG:url(https://www.imdindustrial.com/wp-content/uploads/2016/06/banco-condensadores-4.jpg);
+    --fondotop:url(https://teamcolombia.com.co/wp-content/uploads/2019/04/fondo-electricista.jpg);
+    --imgIngCivil:url(https://img.freepik.com/fotos-premium/imagen-elegante-ingeniero-civil-casco-proteccion_944128-11226.jpg);
 }
 
 
@@ -72,7 +74,9 @@ section{
     height: auto;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center;background-color: #001925;
+    background-image: var(--fondotop);
+    height: 65vh;
 }
 
 .section-sobre-mi{
@@ -277,9 +281,10 @@ header{
     height: auto;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     align-content: center;
+    justify-content: space-around;
     background-size: 80% ;
     background-position: center;
     background-size: cover;
@@ -289,8 +294,8 @@ header{
 
 
 .container-info-cover{
+    max-width: 600px ;
     width: 100%;
-    backdrop-filter: blur(2px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -315,13 +320,13 @@ header{
 }
 
 .container-cover img{
-    max-width: 200px;
-    min-width: 200px;
-    width: 200px;
-    height: 200px;
+    max-width: 300px;
+    min-width: 300px;
+    width: 300px;
+    height: 300px;
     text-align: center;
     display: flex;
-    border-radius: 100%;
+    border-radius: 20%;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -1041,109 +1046,3 @@ footer .redes-footer .fa-instagram:hover{
 
 
 
-
-
-h1 {
-    text-align: center;
-}
-#carrusel-caja {
-    -moz-animation: automatizacion 15s infinite linear;
-    -o-animation: automatizacion 15s infinite linear;
-    -webkit-animation: automatizacion 15s infinite linear;
-    animation: automatizacion 15s infinite linear;
-    -webkit-transition: all 0.75s ease;
-    -moz-transition: all 0.75s ease;
-    -ms-transition: all 0.75s ease;
-    -o-transition: all 0.75s ease;
-    transition: all 0.75s ease;
-    width: 300%;
-}
-#carrusel-contenido {
-    margin: 0 auto;
-    overflow: hidden;
-    text-align: left;
-    position: absolute;
-    z-index: 1;
-    /* backdrop-filter: blur(10px); */
-}
-
-
-
-
-.imagenes{
-    height: 452px;
-    width: 100%;
-}
-.carrusel-elemento {
-    float: left;
-    width: 33.333%;
-}
-@-moz-keyframes automatizacion {
-    0% {
-        margin-left: 0;
-    }
-    30% {
-        margin-left: 0;
-    }
-    35% {
-        margin-left: -100%;
-    }
-    65% {
-        margin-left: -100%;
-    }
-    70% {
-        margin-left: -200%;
-    }
-    95% {
-        margin-left: -200%;
-    }
-    100% {
-        margin-left: 0;
-    }
-}
-@-webkit-keyframes automatizacion {
-    0% {
-        margin-left: 0;
-    }
-    30% {
-        margin-left: 0;
-    }
-    35% {
-        margin-left: -100%;
-    }
-    65% {
-        margin-left: -100%;
-    }
-    70% {
-        margin-left: -200%;
-    }
-    95% {
-        margin-left: -200%;
-    }
-    100% {
-        margin-left: 0;
-    }
-}
-@keyframes automatizacion {
-    0% {
-        margin-left: 0;
-    }
-    30% {
-        margin-left: 0;
-    }
-    35% {
-        margin-left: -100%;
-    }
-    65% {
-        margin-left: -100%;
-    }
-    70% {
-        margin-left: -200%;
-    }
-    95% {
-        margin-left: -200%;
-    }
-    100% {
-        margin-left: 0;
-    }
-}
