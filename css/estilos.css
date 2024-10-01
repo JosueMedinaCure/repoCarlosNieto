@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 
 *{
@@ -9,6 +10,7 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: "Nunito", sans-serif;
+    
 }
 
 html{
@@ -79,6 +81,7 @@ section{
     background-position: center;background-color: #001925;
     background-image: var(--fondotop);
     height: 65vh;
+   
     
 
 }
@@ -314,8 +317,7 @@ header{
     color: var(--white);
     margin-bottom: 20px;
     margin-top: 50px;
-    font-family: "Nunito", sans-serif;
-    font-weight: 700;
+    font-family: "Archivo Black", sans-serif;
 }
 
 .container-info-cover p{
