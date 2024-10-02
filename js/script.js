@@ -33,4 +33,4 @@ function autoSlide() {
 }
 
 // Desliza automáticamente cada 3 segundos
-setInterval(autoSlide, 3000);
+setInterval(autoSlide, 7000);
