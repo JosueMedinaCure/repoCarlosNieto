@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bree+Serif&family=Copse&display=swap');
 
 
 *{
@@ -81,7 +83,8 @@ section{
     background-position: center;background-color: #001925;
     background-image: var(--fondotop);
     height: 65vh;
-   
+   display: flex;
+   justify-content: center;
     
 
 }
@@ -284,6 +287,7 @@ header{
 
 
 .container-cover{
+    max-width: 1200px;
     width: 100%;
     height: auto;
     position: relative;
@@ -292,10 +296,6 @@ header{
     align-items: center;
     align-content: center;
     justify-content: space-around;
-    background-size: 80% ;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 
@@ -306,7 +306,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     z-index: 1;
 }
@@ -316,17 +316,86 @@ header{
     font-weight: 500;
     color: var(--white);
     margin-bottom: 20px;
+    font-family: "Bree Serif", serif;
+}
+
+.container-info-cover h2{
+    font-size: 60px;
+    font-weight: 500;
+    color: var(--white);
     margin-top: 50px;
-    font-family: "Archivo Black", sans-serif;
+    font-family: "Bree Serif", serif;
 }
 
 .container-info-cover p{
     
     color: var(--white);
     font-size: 25px;
-    font-weight: 300;
-    font-family: "Nunito", sans-serif;
+    font-family: "Bree Serif", serif;
 }
+
+.container-cover button{
+    width: auto;
+    height: auto;
+    padding: 2px;
+    border: none;
+    border-radius: 8px;    
+}
+
+.container-cover button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 2rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
+    overflow: hidden;
+   
+    background:var(--blue5);
+    color: ghostwhite;
+   }
+   
+   .container-cover button span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+   }
+   
+   .container-cover button:hover span {
+    color: black;
+   }
+   
+   .container-cover button::before,
+   .container-cover button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+   }
+   
+   .container-cover button::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+   }
+   
+   .container-cover button:hover::before {
+    transform: translate3d(100%, 0, 0);
+   }
+   
+
 
 .container-cover img{
     max-width: 300px;
@@ -343,9 +412,6 @@ header{
     margin-top: 25px;
 }
 
-.container-cover button{
-    
-}
 
 
 
@@ -354,8 +420,26 @@ header{
 
 
 /* Seccion sobre mi */
+.container-contenido-inicial{
+    display: flex;
+    height: 400px;
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.contenido-inicial{
+    display: flex;
+    height: 400px;
+    width: 100%;
+    max-width: 1200px;
+    transition: transform 0.5s ease-in-out;
+}
 
 .section-sobre-mi{
+    position: relative;
+    height: 450px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -368,43 +452,77 @@ header{
     margin-bottom: 40px;
 }
 
+.section-sobre-mi button{
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 3px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    margin: 8px 200px 12px 200px;
+    top: 50%;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.section-sobre-mi button:hover{
+    background-color: red;
+    transition: .2s;
+}
+
 
 .section-sobre-mi .content{
     max-width: 1200px;
-}
-
-.biografia{
-    max-width: 1200px;
-    margin: 20px 20px;
-    border-radius: 20px;
+    width: 1200px;
+    min-width:1200px ;
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: baseline;
-}
-
-.biografia-content{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid var(--border-gray);
-    border-radius: 18px;
     align-items: center;
 }
 
 
-.biografia-content img{
-    height: 200px;
-    width: 200px;
+
+.biografia{
+    max-width: 1300px;
+    margin: 20px 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.biografia-content{
+    max-width: 500px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+.biografia img{
+    height: 320px;
+    width: 525px;
     margin-right: 40px;
     border-radius: 18px;
 }
 
-
 .biografia h3{
     width: auto;
     height: auto;
-    font-weight: 500;
-    font-size: 40px;
+    font-weight: 700;
+    font-size: 45px;
     margin: 12px;    
 }
 
@@ -418,75 +536,6 @@ header{
 }
 
 
-.certificados{
-    margin: 20px 20px;
-    width: auto;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-
-}
- .card-certificado{
-    display: flex;
-    margin-bottom: 5px;
-    border-radius: 12px;
-    border: 1px solid var(--border-gray);
-   
- }
-
- .card-certificado img{
-    height: 150px;
-    margin: 20px;
- }
-
-
-.card-content{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-    
-
-.certificados h3{
-    width: auto;
-    height: auto;
-    font-weight: 400;
-    font-size: 20px;
-    margin: 2px 7px;
-
-}
-
-.certificados p{
-    font-size: 16px;
-    width: auto;
-    justify-content: center;
-    color: var(--black);
-    text-align: start;
-    padding: 15px;
-    border-radius: 12px;
-    margin: 2px 7px;
-    cursor: pointer;
-}
-
-.certificados button{
-    width: auto;
-    margin: 1px 17px;
-    padding: 3px 5px;
-    border-radius: 8px;
-    border: none;
-}
-
-
-.certificados button:hover{
-    background-color: rgb(177, 209, 212);
-    transition: .2s;
-
-
-}
 /* Seccion sobre mi */
 
 

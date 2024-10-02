@@ -12,3 +12,25 @@ window.addEventListener("scroll", function(){
 
 })
 
+
+
+
+let currentSlide = 0;
+
+function moveSlide(direction) {
+    const carousel = document.querySelector('.contenido-inicial');
+    const totalSlides = document.querySelectorAll('.content').length;
+    
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    
+    const offset = -currentSlide * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+}
+
+
+function autoSlide() {
+    moveSlide(1);
+}
+
+// Desliza automáticamente cada 3 segundos
+setInterval(autoSlide, 3000);
