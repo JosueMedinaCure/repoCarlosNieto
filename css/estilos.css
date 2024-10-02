@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bree+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bree+Serif&family=Copse&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bree+Serif&family=Copse&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 
 *{
@@ -11,7 +12,9 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: "Nunito", sans-serif;
+    font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+
     
 }
 
@@ -67,7 +70,7 @@ html{
 section{
     height: auto;
     scroll-snap-align:center;
-    margin-bottom: 70px;
+    margin-bottom: 120px;
     scroll-margin-top: 100px;
            
 }
@@ -78,7 +81,7 @@ section{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;background-color: #001925;
-    background-image:url(/CarlosN/repoCarlosNieto/img/fondo-electricista.jpg);
+    background-image:url(/CarlosN/repoCarlosNieto/img/fondo-electricista.png);
     height: 65vh;
    display: flex;
    justify-content: center;
@@ -310,25 +313,23 @@ header{
 
 .container-info-cover h1{
     font-size: 60px;
-    font-weight: 500;
+    font-weight: bold;
     color: var(--white);
     margin-bottom: 20px;
-    font-family: "Bree Serif", serif;
 }
 
 .container-info-cover h2{
     font-size: 60px;
-    font-weight: 500;
+    font-weight: bold;
     color: var(--white);
     margin-top: 50px;
-    font-family: "Bree Serif", serif;
 }
 
 .container-info-cover p{
     margin-bottom: 10px;
     color: var(--white);
     font-size: 25px;
-    font-family: "Bree Serif", serif;
+    
 }
 
 .container-cover button{
@@ -407,6 +408,7 @@ header{
     position: relative;
     z-index: 1;
     margin-top: 25px;
+    visibility: hidden;
 }
 
 
@@ -419,7 +421,8 @@ header{
 /* Seccion sobre mi */
 .container-contenido-inicial{
     display: flex;
-    height: 400px;
+    flex-direction: column;
+    height: 450px;
     width: 100%;
     max-width: 1200px;
     overflow: hidden;
@@ -610,13 +613,13 @@ header{
 .beneficicos{
     background-color: #378add;
     height: auto;
-    max-width: 1000px;
+    max-width: 1200px;
     width: auto;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: baseline;
     border-radius: 12px;
 }
 .beneficicos li{
@@ -632,6 +635,23 @@ header{
     font-size: 18px;
 }
 
+
+.beneficios-cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.beneficios-content{
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    font-size: 14px;
+    width: 70%;
+}
 
 
 
@@ -679,7 +699,7 @@ article img{
 
 
 .container-aside{
-    max-width: 1000px;
+    max-width: 1200px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -688,21 +708,18 @@ article img{
 }
 
 .container-aside aside{
-    width: 250px;
+    width: 520px;
     border-right: 6px;
     box-shadow: 0 0 20px -20px black;
     border-radius: 12px;
+    border: solid 1px rgb(206 206 206 / 46%);
     overflow: hidden;
     margin-left: 40px;
     margin-bottom: 40px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
-    text-align: center;
-    background-color: var(--blue10);
-    min-height: 300px;
+    min-height: 100px;
 }
 
 .container-aside title{
@@ -716,19 +733,25 @@ article img{
     flex-wrap: wrap;
     margin: 20px;
     margin-bottom: 30px;
+    color: #000;
 }
 
 .container-aside aside h2{
-    background-color: var(--blue7);
-    width: 90%;
     border-radius: 8px;
 }
 
 .container-aside aside h2,
 .container-aside aside p{
-    margin-top: 20px;
+    margin-top: 7px;
     padding: 0px 20px;
-    color: var(--white);
+    color: #000;
+}
+
+
+.container-aside img{
+    width: 150px;
+    height: 150px;
+    padding: 10px;
 }
 
 .container-aside aside button{
