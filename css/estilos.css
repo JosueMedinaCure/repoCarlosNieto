@@ -49,11 +49,7 @@ html{
     --blue10:#13425f;
 
     --headerIMG:url(https://diegopaz.net/wp-content/uploads/2024/04/electricista-trabaja-centralita-cable-conexion-electrica-1024x683.jpg);
-    --equipoTrabjIMG:url(https://centroemp.com/wp-content/uploads/2019/12/maquinaria-pesada.png);
-    --BancoCondIMG:url(https://www.imdindustrial.com/wp-content/uploads/2016/06/banco-condensadores-4.jpg);
-    --fondotop:url(https://teamcolombia.com.co/wp-content/uploads/2019/04/fondo-electricista.jpg);
-    --imgIngCivil:url(https://img.freepik.com/fotos-premium/imagen-elegante-ingeniero-civil-casco-proteccion_944128-11226.jpg);
-    --IMGpanelSolar:url(https://ecofener.com/blog/wp-content/uploads/2024/06/22.-10-beneficios-de-instalar-paneles-solares-en-tu-hogar.jpg)
+    --IMGpanelSolar:url(/)
 }
 
 
@@ -71,7 +67,7 @@ html{
 section{
     height: auto;
     scroll-snap-align:center;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
     scroll-margin-top: 100px;
            
 }
@@ -82,7 +78,7 @@ section{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;background-color: #001925;
-    background-image: var(--fondotop);
+    background-image:url(/CarlosN/repoCarlosNieto/img/fondo-electricista.jpg);
     height: 65vh;
    display: flex;
    justify-content: center;
