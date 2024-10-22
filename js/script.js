@@ -1,61 +1,35 @@
-document.getElementById("icon-menu").addEventListener("click", mostrar_menu);
-
-function mostrar_menu(){
-
-    document.getElementById("move-content").classList.toggle('move-container-all');
-    document.getElementById("show-menu").classList.toggle('show-lateral');
-}
-
-window.addEventListener("scroll", function(){
-    const header = document.querySelector(".menu");
-    header.classList.toggle("animacion", window.scrollY > 0);
-
-})
-
-
-
-
 let currentSlide = 0;
-let autoSlideInterval;
+const carousel = document.querySelector('.imagenes');
+const totalSlides = document.querySelectorAll('.imagenes .card').length;
 
-// Función que mueve el carrusel
+// Mover el carrusel en la dirección dada (1 adelante, -1 atrás)
 function moveSlide(direction) {
-    const carousel = document.querySelector('.contenido-inicial');
-    const totalSlides = document.querySelectorAll('.content').length;
-
-    // Calcular la nueva posición del slide
     currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    const offset = -currentSlide * 35; // Ajuste basado en el 35% del tamaño de las imágenes
+carousel.style.transform = `translateX(${offset}%)`;
 
-    // Aplicar la transformación para mover el carrusel
-    const offset = -currentSlide * 100;
-    carousel.style.transform = `translateX(${offset}%)`;
 }
 
-// Función para hacer que el carrusel se deslice automáticamente
+// Desplazamiento automático
 function autoSlide() {
-    moveSlide(1); // Mover una imagen hacia adelante
+    moveSlide(1);
 }
 
-// Iniciar el deslizador automático
-function startAutoSlide() {
-    autoSlideInterval = setInterval(autoSlide, 6000); // Cada 3 segundos
-}
+// Iniciar desplazamiento automático
+let autoSlideInterval = setInterval(autoSlide, 6000); // Cambia cada 3 segundos
 
-// Reiniciar el deslizamiento automático cuando se hace clic en los botones
+// Reiniciar el carrusel cuando se hace clic en un botón
 function restartAutoSlide(direction) {
-    clearInterval(autoSlideInterval); // Detener el intervalo actual
+    clearInterval(autoSlideInterval); // Detener el desplazamiento automático
     moveSlide(direction);             // Mover el carrusel manualmente
-    startAutoSlide();                 // Reiniciar el deslizamiento automático
+    autoSlideInterval = setInterval(autoSlide, 8000); // Reiniciar el desplazamiento automático
 }
 
-// Agregar eventos a los botones de navegación
+// Eventos de clic en los botones de navegación
 document.getElementById('prevBtn').addEventListener('click', () => {
-    restartAutoSlide(0); // Mover una imagen hacia atrás
+    restartAutoSlide(-1); // Mover hacia atrás
 });
 
 document.getElementById('nextBtn').addEventListener('click', () => {
-    restartAutoSlide(0); // Mover una imagen hacia adelante
+    restartAutoSlide(1); // Mover hacia adelante
 });
-
-// Iniciar el carrusel automáticamente al cargar la página
-startAutoSlide();
